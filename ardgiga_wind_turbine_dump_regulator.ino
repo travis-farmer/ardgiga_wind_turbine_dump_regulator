@@ -6,7 +6,7 @@ int Estop_output = 3; // active high, to drive a 100A SSR to short the output of
 int Estop_counter = 0;
 unsigned long lastTim = 0UL;
 float readVolts(int inPin, float LowR, float HighR) {
-  return ((((3.3/ 1024) * analogRead(inPin)) / LowR) * (HighR + LowR))
+  return ((((3.3/ 1024) * analogRead(inPin)) / LowR) * (HighR + LowR));
 }
 void setup() {
   pinMode(Estop_input,INPUT_PULLUP);
